@@ -30,6 +30,8 @@
 
  const server = http.createServer((req, res)=>{
 
+  console.log(req)
+
   if(req.url === '/'){
     res.setHeader('Content-Type', 'text/html');
     res.write('<html>')
