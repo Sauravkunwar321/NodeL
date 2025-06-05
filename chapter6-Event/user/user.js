@@ -42,7 +42,7 @@ const requestHandler = (req, res) => {
       jsonString = JSON.stringify(jsonObject);
       console.log(jsonString);
       fs.writeFile("user-det.txt", jsonString, (error) => {
-        console.log("all done successfully");
+        console.log("all done successfully. ok");
         res.statusCode = 302;
         res.setHeader("Location", "/");
       });
