@@ -10,6 +10,17 @@ const requestHandler = require("./user");
 
 const app = express();
 
-const server = http.createServer(app);
+app.use("/", (req, res, next) => {
+  console.log("First middleware", req.url, req.method);
+  // res.send("<h1>Hello 1</h1>");
+  next();
+});
 
-server.listen(3001);
+app.use("/submit-details", (req, res, next) => {
+  console.log("second middleware", req.url, req.method);
+  res.send("<p>Welcome</p>");
+});
+
+// const server = http.createServer(app);
+
+app.listen(3000);
