@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-red-700">here are our registered homes:</h1>
+      <ul>
+        <%registeredHomes.forEach(home => { %>
+        <li><%=home.houseName %></li>
+
+        <% }) %>
+      </ul>
+    </header>
+    <main>
+      <a href="/host/add-home">Add Home</a>
+    </main>
+  </body>
+</html>
